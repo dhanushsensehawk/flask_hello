@@ -25,8 +25,7 @@ jobs:
       run: |
         echo "::set-output name=date::$(date +'%Y-%m-%d--%M-%S')"
     - name: Build the Docker image
-      run: |
-        docker build . --file Dockerfile --tag $sridhanush1307/flask_hello:${{ steps.date.outputs.date }}
+      run: docker build . --file Dockerfile --tag sridhanush1307/flask_hello:${{ steps.date.outputs.date }}
     - name: Push to Dockerhub
       run: |
         docker push $sridhanush1307/flask_hello:${{ steps.date.outputs.date }}
