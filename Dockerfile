@@ -2,7 +2,7 @@
 FROM python:3.9-alpine
 
 # Set the working directory in the container
-WORKDIR //home/ubuntu/flask_example
+WORKDIR /home/ubuntu/flask_example
 
 # Copy the application code to the container
 COPY . /home/ubuntu/flask_example
